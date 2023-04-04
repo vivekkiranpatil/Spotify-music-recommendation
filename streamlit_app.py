@@ -120,9 +120,8 @@ def recommend_songs(song_list, spotify_data, n_songs=10):
     df_recs = pd.DataFrame(rec_songs[metadata_cols])
     return df_recs
 
-st.title('Recommendations from Four Tet')
-st.write('Generate song recommendations from DJ and producer Four Tet, '
-         'based on his popular Spotify playlist.')
+st.title('Spotify Music Recommendations')
+st.write('Project for SEMP @COEP Tech 2023')
 
 components.iframe("https://open.spotify.com/embed/playlist/2uzbATYxs9V8YQi5lf89WG", width=700, height=300)
 
@@ -256,5 +255,5 @@ st.markdown('**Valence** is a measure from 0.0 to 1.0 describing the musical pos
             'low valence sound more negative (e.g. sad, depressed, angry).')
 st.write('Tip: After setting your parameters, try adjusting just one or two to see if your results are different. '
          'Energy has a surprisingly large effect on the results!')
-st.write('Project made for Software Engineerring Mini Project Course, TY @COEP Tech.')
+st.write('This Project made for Software Engineerring Mini Project Course, TY @COEP Tech.')
 st.write('Credits : Pradnyesh Utpat, Shubham Gandhi, Vivek Patil (DIVISION 2)')
