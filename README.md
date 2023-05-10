@@ -35,3 +35,20 @@ Based on the visualized data points of the above three-cluster model, we impleme
 
 Separating out audio features in our dataset, we calculate the mean vector of a song list as our "song center" and use cosine distance to find closest matches to return as a DataFrame. The end result is a user-input song or song list returning closest-distance song suggestions for the user based on Spotify's numerical audio features.
 
+## Challenges we faced
+
+We experimented with addtitional datascraping tools from open source websitess like SoundCloud, Deezer, Pandora and Apple Music. The problem with these platforms included very limited api calls to scrape data and anti-automation and bot-bursting servies that didn't allow us to scrap data effectively. 
+
+The result was we had to settle with using Spotipy, which allowed us to scrape upto 500 api calls per month, which we scraped using multiple accounts. The undersampling problem was mostly solved by SMOT.
+
+Moreover, we experimented with other Tech Stacks like Node Stack, and Python-Flask. All of them required extensive work in frontend developement to inculcate into a deployable format to analyze data.
+Choosing Streamlit was the optimal outcome due to very little need for frontend development as they support markdown developement.
+
+## Future prospects
+
+There are several directions we could take this project in the future to improve or expand upon the current implementation:
+
+1. Incorporating User Feedback: One way to further personalize the recommendations could be to incorporate user feedback. For example, we could ask users to rate how much they like the recommended songs, and use this feedback to adjust the recommendations for future users. This would require building a feedback mechanism into the web app and incorporating it into the recommendation algorithm.
+2. Exploring Alternative Recommendation Algorithms: While the current content-based recommendation system based on cosine distance is effective, we could explore other algorithms such as collaborative filtering or matrix factorization to see if they could improve the recommendations. This would require collecting additional data, such as user listening histories or ratings, and implementing a different algorithm in the recommendation system.
+3. Expanding to Additional Playlists: While our initial implementation used a playlist from Four Tet, we could expand the project to include additional playlists from a variety of artists and genres. This would allow us to test the effectiveness of the recommendation system on a wider range of music, and potentially identify any limitations of the current algorithm.
+4. Incorporating External Data: We could also explore incorporating external data sources, such as artist or album information, to further personalize the recommendations. For example, we could recommend songs from the same album or by the same artist as the user-input track, or incorporate genre or mood information to generate more targeted recommendations.
